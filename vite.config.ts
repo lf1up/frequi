@@ -18,7 +18,7 @@ try {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: process.env.ROOT_PATH || '/',
+  base: process.env.ROOT_URL_POSTFIX || '/',
   define: {
     __COMMIT_HASH__: JSON.stringify(commitHash),
   },
