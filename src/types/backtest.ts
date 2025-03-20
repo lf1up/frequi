@@ -59,14 +59,17 @@ export interface PeriodicStat {
   profit_abs: number;
   wins: number;
   draws: number;
-  loses: number;
-  winrate?: number;
+  /** Deprecated, removed in 2025.3 */
+  loses?: number;
+  losses?: number;
+  profit_factor: number;
 }
 
 export interface PeriodicBreakdown {
   day: PeriodicStat[];
   week: PeriodicStat[];
   month: PeriodicStat[];
+  year?: PeriodicStat[];
 }
 
 export interface StrategyBacktestResult {
