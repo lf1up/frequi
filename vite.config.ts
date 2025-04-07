@@ -20,6 +20,7 @@ try {
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: process.env.BASE_URL || '/',
   define: {
     __COMMIT_HASH__: JSON.stringify(commitHash),
   },
